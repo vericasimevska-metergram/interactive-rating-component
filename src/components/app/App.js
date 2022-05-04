@@ -1,17 +1,17 @@
 import styles from "./app.module.css";
 import { Card } from '../card/Card.js'
-import { SecondCard } from '../secondCard/SecondCard.js'
+import { ResultCard } from '../resultCard/ResultCard.js'
 import { useState } from 'react';
 
 function App() {
     const [isSubmitClicked, setSubmitClicked] = useState(false);
     const [rating, setRating] = useState('');
 
-    function RatingSelected(event) {
+    function onSelectRating(event) {
         setRating(event.target.innerText)
     }
 
-    function whenSubmitClicked() {
+    function onSubmitClicked() {
         setSubmitClicked(true);
     }
 
@@ -19,11 +19,12 @@ function App() {
         <div className={styles.container}>
             {!isSubmitClicked ? (
                 <Card
-                    whenSubmitClicked={whenSubmitClicked}
-                    RatingSelected={RatingSelected}
+                    onSelectRating={onSelectRating}
+                    onSubmitClicked={onSubmitClicked}
+
                 />
             ) : (
-                <SecondCard rating={rating} />
+                <ResultCard rating={rating} />
             )
             }
         </div>
