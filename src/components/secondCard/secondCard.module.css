@@ -1,0 +1,30 @@
+.forImage{
+display: flex;
+justify-content: center;
+}
+
+.result{
+margin-top: 35px;
+background-color:rgba(124, 135, 152, 0.2);
+padding:5px 15px;
+border-radius: 64px;
+color: hsl(25, 97%, 53%);
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color:white;
+}
+.mainParagraph{
+    color:hsl(217, 12%, 63%);
+    margin: 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+}
+.h1{
+    margin-bottom: 7px;
+}
